@@ -32,6 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Cercle.cpp" />
+		<Unit filename="Cercle.h" />
+		<Unit filename="Hexagone.cpp" />
+		<Unit filename="Hexagone.h" />
+		<Unit filename="Rectangle.cpp" />
+		<Unit filename="Rectangle.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
