@@ -6,14 +6,14 @@ class API_2 {
 
  public:
 
-    static void drawRect(Integer x, Integer y, Integer l, Integer w, Integer a);
+    static void drawRect(int x, int y, int l, int w, int a);
 
-    static void drawExagon(Integer x, Integer y, Integer r, Integer a);
+    static void drawExagon(int x, int y, int r, int a);
 
-    static void drawCircle(Integer x, Integer y, Integer r);
+    static void drawCircle(int x, int y, int r);
 
  public:
-    Integer newAttr;
+    int newAttr;
 };
 
 #endif // API_2_h

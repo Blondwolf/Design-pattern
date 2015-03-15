@@ -1,4 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+	<File name="../APIs/API_1.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="203" topLine="0" />
+	</File>
+	<File name="../APIs/API_1.h" open="0" top="0" tabpos="13">
+		<Cursor position="57" topLine="0" />
+	</File>
+	<File name="../APIs/API_2.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="402" topLine="0" />
+	</File>
+	<File name="../APIs/API_3.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="395" topLine="0" />
+	</File>
+	<File name="APIs_abstraction/API1_implementor.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="61" topLine="0" />
+	</File>
+	<File name="APIs_abstraction/API1_implementor.h" open="0" top="0" tabpos="0">
+		<Cursor position="90" topLine="0" />
+	</File>
+	<File name="APIs_abstraction/API2_implementor.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="61" topLine="0" />
+	</File>
+	<File name="APIs_abstraction/API2_implementor.h" open="0" top="0" tabpos="0">
+		<Cursor position="393" topLine="0" />
+	</File>
+	<File name="APIs_abstraction/API3_implementor.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="352" topLine="0" />
+	</File>
+	<File name="APIs_abstraction/API3_implementor.h" open="0" top="0" tabpos="0">
+		<Cursor position="40" topLine="0" />
+	</File>
+	<File name="APIs_abstraction/APIs_implementor.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="31" topLine="0" />
+	</File>
+	<File name="APIs_abstraction/APIs_implementor.h" open="0" top="0" tabpos="0">
+		<Cursor position="96" topLine="0" />
+	</File>
+	<File name="formes/circle.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="87" topLine="0" />
+	</File>
+	<File name="formes/circle.h" open="1" top="0" tabpos="2">
+		<Cursor position="105" topLine="0" />
+	</File>
+	<File name="formes/hexagon.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="98" topLine="13" />
+	</File>
+	<File name="formes/hexagon.h" open="0" top="0" tabpos="2">
+		<Cursor position="107" topLine="0" />
+	</File>
+	<File name="formes/rectangle.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="373" topLine="18" />
+	</File>
+	<File name="formes/rectangle.h" open="1" top="1" tabpos="6">
+		<Cursor position="264" topLine="0" />
+	</File>
+	<File name="formes/shape.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="138" topLine="23" />
+	</File>
+	<File name="formes/shape.h" open="0" top="0" tabpos="4">
+		<Cursor position="189" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="1050" topLine="0" />
+	</File>
 </CodeBlocks_layout_file>

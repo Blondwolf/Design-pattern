@@ -1,0 +1,96 @@
+# depslib dependency file v1.0
+1426353330 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/APIs/API_1.cpp
+	"API_1.h"
+	<stdio.h>
+
+1426058705 /media/cloud/arkeine/git/design-pattern/Design-pattern/APIs/API_1.h
+
+1426353391 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/APIs/API_2.cpp
+	"API_2.h"
+	<stdio.h>
+
+1426058790 /media/cloud/arkeine/git/design-pattern/Design-pattern/APIs/API_2.h
+
+1426353381 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/APIs/API_3.cpp
+	"API_3.h"
+	<stdio.h>
+
+1426058782 /media/cloud/arkeine/git/design-pattern/Design-pattern/APIs/API_3.h
+
+1426352969 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/main.cpp
+	<iostream>
+	<stdio.h>
+
+1426267752 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/hexagon.cpp
+	"hexagon.h"
+
+1426267731 /media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/hexagon.h
+	"shape.h"
+
+1426267731 /media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/shape.h
+
+1426267728 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/rectangle.cpp
+	"rectangle.h"
+
+1426267165 /media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/rectangle.h
+	"shape.h"
+
+1426267460 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/shape.cpp
+	"shape.h"
+
+1426266870 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/circle.cpp
+	"circle.h"
+
+1426148849 /media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/circle.h
+	"shape.h"
+
+1426352660 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/APIs_abstraction/API1_implementor.cpp
+	"API1_implementor.h"
+	"../../APIs/API_1.h"
+
+1426352660 /media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/APIs_abstraction/API1_implementor.h
+	"APIs_implementor.h"
+
+1426351625 /media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/APIs_abstraction/APIs_implementor.h
+
+1426351262 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/APIs_abstraction/APIs_implementor.cpp
+	"APIs_implementor.h"
+
+1426409884 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/formes/circle.cpp
+	"circle.h"
+
+1426409561 /media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/formes/circle.h
+	"shape.h"
+
+1426409506 /media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/formes/shape.h
+
+1426409877 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/formes/hexagon.cpp
+	"hexagon.h"
+
+1426409561 /media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/formes/hexagon.h
+	"shape.h"
+
+1426410065 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/formes/rectangle.cpp
+	"rectangle.h"
+
+1426410059 /media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/formes/rectangle.h
+	"shape.h"
+
+1426409851 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/formes/shape.cpp
+	"shape.h"
+	"../APIs_abstraction/APIs_implementor.h"
+
+1426352660 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/APIs_abstraction/API2_implementor.cpp
+	"API2_implementor.h"
+	"../../APIs/API_2.h"
+
+1426409743 /media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/APIs_abstraction/API2_implementor.h
+	"APIs_implementor.h"
+
+1426352724 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/APIs_abstraction/API3_implementor.cpp
+	"API3_implementor.h"
+	"../../APIs/API_3.h"
+
+1426409742 /media/cloud/arkeine/git/design-pattern/Design-pattern/MultipleAPI_AvecBridge/APIs_abstraction/API3_implementor.h
+	"APIs_implementor.h"
+

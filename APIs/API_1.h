@@ -6,11 +6,11 @@ class API_1 {
 
  public:
 
-    static void orientedRectangle(Integer x, Integer y, Integer l, Integer w, Integer a);
+    static void orientedRectangle(int x, int y, int l, int w, int a);
 
-    static void orientedExagon(Integer x, Integer y, Integer r, Integer a);
+    static void orientedExagon(int x, int y, int r, int a);
 
-    static void simpleCircle(Integer x, Integer y, Integer r);
+    static void simpleCircle(int x, int y, int r);
 };
 
 #endif // API_1_h

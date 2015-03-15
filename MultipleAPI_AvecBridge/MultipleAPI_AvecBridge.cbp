@@ -32,6 +32,28 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../APIs/API_1.cpp" />
+		<Unit filename="../APIs/API_1.h" />
+		<Unit filename="../APIs/API_2.cpp" />
+		<Unit filename="../APIs/API_2.h" />
+		<Unit filename="../APIs/API_3.cpp" />
+		<Unit filename="../APIs/API_3.h" />
+		<Unit filename="APIs_abstraction/API1_implementor.cpp" />
+		<Unit filename="APIs_abstraction/API1_implementor.h" />
+		<Unit filename="APIs_abstraction/API2_implementor.cpp" />
+		<Unit filename="APIs_abstraction/API2_implementor.h" />
+		<Unit filename="APIs_abstraction/API3_implementor.cpp" />
+		<Unit filename="APIs_abstraction/API3_implementor.h" />
+		<Unit filename="APIs_abstraction/APIs_implementor.cpp" />
+		<Unit filename="APIs_abstraction/APIs_implementor.h" />
+		<Unit filename="formes/circle.cpp" />
+		<Unit filename="formes/circle.h" />
+		<Unit filename="formes/hexagon.cpp" />
+		<Unit filename="formes/hexagon.h" />
+		<Unit filename="formes/rectangle.cpp" />
+		<Unit filename="formes/rectangle.h" />
+		<Unit filename="formes/shape.cpp" />
+		<Unit filename="formes/shape.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
