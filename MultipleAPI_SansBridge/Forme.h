@@ -7,7 +7,9 @@ class Forme
     public:
         Forme();
         virtual ~Forme();
+        void draw();
     protected:
+        virtual void paint();
     private:
 };
 

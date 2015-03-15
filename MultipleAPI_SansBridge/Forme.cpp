@@ -9,3 +9,8 @@ Forme::~Forme()
 {
     //dtor
 }
+
+void Forme::draw()
+{
+    paint();
+}
