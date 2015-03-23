@@ -1,15 +1,13 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
-#include "Forme.h"
 
-class Rectangle : public Forme
+class Rectangle
 {
     public:
         Rectangle();
         virtual ~Rectangle();
     protected:
-        virtual void paint();
     private:
 };
 

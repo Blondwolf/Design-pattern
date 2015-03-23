@@ -1,15 +1,13 @@
 #ifndef CERCLE_H
 #define CERCLE_H
 
-#include "Forme.h"
 
-class Cercle : public Forme
+class Cercle
 {
     public:
         Cercle();
         virtual ~Cercle();
     protected:
-        virtual void paint();
     private:
 };
 

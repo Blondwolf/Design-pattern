@@ -34,24 +34,10 @@
 		</Compiler>
 		<Unit filename="Cercle.cpp" />
 		<Unit filename="Cercle.h" />
-		<Unit filename="CercleAPI1.cpp" />
-		<Unit filename="CercleAPI1.h" />
-		<Unit filename="CercleAPI2.cpp" />
-		<Unit filename="CercleAPI2.h" />
-		<Unit filename="Forme.cpp" />
-		<Unit filename="Forme.h" />
 		<Unit filename="Hexagone.cpp" />
 		<Unit filename="Hexagone.h" />
-		<Unit filename="HexagoneAPI1.cpp" />
-		<Unit filename="HexagoneAPI1.h" />
-		<Unit filename="HexagoneAPI2.cpp" />
-		<Unit filename="HexagoneAPI2.h" />
 		<Unit filename="Rectangle.cpp" />
 		<Unit filename="Rectangle.h" />
-		<Unit filename="RectangleAPI1.cpp" />
-		<Unit filename="RectangleAPI1.h" />
-		<Unit filename="RectangleAPI2.cpp" />
-		<Unit filename="RectangleAPI2.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

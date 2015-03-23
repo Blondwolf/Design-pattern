@@ -1,6 +1,6 @@
 #include "Cercle.h"
 
-Cercle::Cercle() : Forme()
+Cercle::Cercle()
 {
     //ctor
 }

@@ -1,6 +1,6 @@
 #include "Hexagone.h"
 
-Hexagone::Hexagone() : Forme()
+Hexagone::Hexagone()
 {
     //ctor
 }
