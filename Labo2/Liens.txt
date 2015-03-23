@@ -1,0 +1,5 @@
+//Diapo du prof
+http://stephane-gobron.net/Core/Courses/3_HE-Arc/DesignPatterns/BSc2_DesignPatterns_chap3_v1-31.pdf
+
+//Fractal de Cesar
+http://mathworld.wolfram.com/CesaroFractal.html
