@@ -11,9 +11,12 @@ public:
     ~Composite();
 
     virtual void operation();
-    virtual void add(Component c);
-    virtual void remove(Component c);
-    virtual QList<Component> getChildren() const;
+    virtual void add(Component *c);
+    virtual void remove(Component *c);
+    virtual const QList<Component *> getChildren() const;
+
+private:
+    QList<Component*> listChildren;
 };
 
 #endif // COMPOSITE_H

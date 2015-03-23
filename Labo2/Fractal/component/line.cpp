@@ -10,3 +10,8 @@ Line::~Line()
 
 }
 
+void Line::operation()
+{
+
+}
+

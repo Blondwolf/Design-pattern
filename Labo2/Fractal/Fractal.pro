@@ -13,12 +13,12 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-        component.cpp \
-    composite.cpp \
-    line.cpp
+    interface/mainwindow.cpp \
+    component/component.cpp \
+    component/composite.cpp \
+    component/line.cpp
 
-HEADERS  += mainwindow.h \
-        component.h \
-    composite.h \
-    line.h
+HEADERS  += interface/mainwindow.h \
+    component/component.h \
+    component/composite.h \
+    component/line.h
