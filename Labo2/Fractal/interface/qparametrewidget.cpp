@@ -61,6 +61,11 @@ QParametreWidget::QParametreWidget(QWidget *parent):QWidget(parent)
 
 }
 
+QParametreWidget::~QParametreWidget()
+{
+
+}
+
 void QParametreWidget::value(int tamp)
 {
     tamp = NbIteration->value();

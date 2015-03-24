@@ -2,13 +2,11 @@
 
 Composite::Composite()
 {
-    listChildren = new QList<Component*>;
 }
 
 Composite::~Composite()
 {
     qDeleteAll(listChildren);
-    delete listChildren;
 }
 
 void Composite::operation()

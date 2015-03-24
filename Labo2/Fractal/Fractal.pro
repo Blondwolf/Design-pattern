@@ -14,11 +14,19 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     interface/mainwindow.cpp \
+    interface/qcentralwidget.cpp \
+    interface/qdessinwidget.cpp \
+    interface/qparametrewidget.cpp \
     component/component.cpp \
     component/composite.cpp \
-    component/line.cpp
+    component/line.cpp \
+    interface/test.cpp
 
 HEADERS  += interface/mainwindow.h \
+    interface/qcentralwidget.h \
+    interface/qdessinwidget.h \
+    interface/qparametrewidget.h \
     component/component.h \
     component/composite.h \
-    component/line.h
+    component/line.h \
+    interface/test.h

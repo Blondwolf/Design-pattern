@@ -4,8 +4,11 @@
 
 class QDessinWidget:public QWidget
 {
+    Q_OBJECT
 public:
-    QDessinWidget(QWidget *parent = 0);
+    explicit QDessinWidget(QWidget *parent = 0);
+    ~QDessinWidget();
+
     QGraphicsScene * scene;
 
 

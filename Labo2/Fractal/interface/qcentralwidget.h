@@ -5,8 +5,11 @@
 
 class QCentralWidget : public QWidget
 {
+    Q_OBJECT
 public:
-    QCentralWidget(QWidget *parent = 0);
+    explicit QCentralWidget(QWidget *parent = 0);
+    ~QCentralWidget();
+
     QParametreWidget *qpw;
     QDessinWidget *qdw;
 

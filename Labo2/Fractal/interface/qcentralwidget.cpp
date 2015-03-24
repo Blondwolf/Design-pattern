@@ -15,3 +15,8 @@ QCentralWidget::QCentralWidget(QWidget *parent):QWidget(parent)
     g->show();
 
 }
+
+QCentralWidget::~QCentralWidget()
+{
+
+}

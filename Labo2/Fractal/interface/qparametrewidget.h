@@ -4,8 +4,10 @@
 
 class QParametreWidget: public QWidget
 {
+    Q_OBJECT
 public:
-    QParametreWidget(QWidget *parent = 0);
+    explicit QParametreWidget(QWidget *parent = 0);
+    ~QParametreWidget();
 
     /* Déclaration des labels */
     QLabel *lblNbCotePolygone;
