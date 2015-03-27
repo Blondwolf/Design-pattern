@@ -11,6 +11,8 @@ QProgressWiget::QProgressWiget(QWidget *parent) : QWidget(parent)
     QVBoxLayout *v= new QVBoxLayout(this);
     v->addWidget(_btStart);
     v->addWidget(_progressBar);
+    
+    
 }
 
 QProgressWiget::~QProgressWiget()

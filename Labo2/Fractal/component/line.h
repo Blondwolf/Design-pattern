@@ -11,7 +11,7 @@ public:
     Line();
     ~Line();
 
-    virtual void operation();
+    virtual void draw(QPainter &gc);
 
     virtual QPointF p1() const;
     virtual QPointF p2() const;
@@ -19,8 +19,8 @@ public:
     virtual void setP2(QPointF p2);
 
 private:
-    QPointF p1;
-    QPointF p2;
+    QPointF _p1;
+    QPointF _p2;
 };
 
 #endif // LINE_H

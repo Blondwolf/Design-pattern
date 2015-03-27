@@ -14,8 +14,12 @@ public:
     explicit QProgressWiget(QWidget *parent = 0);
     ~QProgressWiget();
 
+signals:
+    void start();
+
 public slots:
     void setProgress(int percent);
+    void on__btStart_pressed();
 
 private:
     QLabel *_lblProgress;

@@ -9,11 +9,11 @@ Composite::~Composite()
     qDeleteAll(listChildren);
 }
 
-void Composite::operation()
+void Composite::draw(QPainter &gc)
 {
     foreach(Component *c, listChildren)
     {
-        c->operation();
+        c->draw(gc);
     }
 }
 
