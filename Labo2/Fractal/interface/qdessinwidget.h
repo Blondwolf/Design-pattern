@@ -8,10 +8,6 @@ class QDessinWidget:public QWidget
 public:
     explicit QDessinWidget(QWidget *parent = 0);
     ~QDessinWidget();
-
-    QGraphicsScene * scene;
-
-
 };
 
 #endif // QDESSINWIDGET_H

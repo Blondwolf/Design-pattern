@@ -1,6 +1,11 @@
 #ifndef QPARAMETREWIDGET_H
 #define QPARAMETREWIDGET_H
-#include <QtWidgets>
+
+#include <QWidget>
+
+class QLabel;
+class QSpinBox;
+class QDoubleSpinBox;
 
 class QParametreWidget: public QWidget
 {
@@ -9,25 +14,25 @@ public:
     explicit QParametreWidget(QWidget *parent = 0);
     ~QParametreWidget();
 
-    /* Déclaration des labels */
-    QLabel *lblNbCotePolygone;
-    QLabel *lblLgArretePolygone;
-    QLabel *lblLgBaseTriangle;
-    QLabel *lblHtTriangle;
-    QLabel *lblNbIteration;
+    int nbCotePolygone() const;
+    int nbIteration() const;
+    double arretePolygone() const;
+    double baseTriangle() const;
+    double hauteurTriangle() const;
 
-    /* Déclaration des lineEdits */
-    QLineEdit *NbCotePolygone;
-    QLineEdit *LgArretePolygone;
-    QLineEdit *LgBaseTriangle;
-    QLineEdit *HtTriangle;
+private:
+    QLabel *_lblNbCotePolygone;
+    QLabel *_lblLgArretePolygone;
+    QLabel *_lblLgBaseTriangle;
+    QLabel *_lblHtTriangle;
+    QLabel *_lblNbIteration;
 
-    /* Déclaration du slider */
-    QSlider *NbIteration;
+    QSpinBox *_nbCotePolygone;
+    QSpinBox *_nbIteration;
 
-public slots:
-    void value(int);
-
+    QDoubleSpinBox *_lgArretePolygone;
+    QDoubleSpinBox *_lgBaseTriangle;
+    QDoubleSpinBox *_htTriangle;
 };
 
 #endif // QPARAMETREWIDGET_H

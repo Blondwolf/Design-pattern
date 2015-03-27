@@ -2,7 +2,7 @@
 
 QDessinWidget::QDessinWidget(QWidget *parent):QWidget(parent)
 {
-    scene = new QGraphicsScene(this);
+    setMinimumSize(300,300);
 }
 
 QDessinWidget::~QDessinWidget()

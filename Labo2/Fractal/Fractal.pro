@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     component/component.cpp \
     component/composite.cpp \
     component/line.cpp \
-    interface/test.cpp
+    interface/test.cpp \
+    interface/qprogresswiget.cpp
 
 HEADERS  += interface/mainwindow.h \
     interface/qcentralwidget.h \
@@ -29,4 +30,5 @@ HEADERS  += interface/mainwindow.h \
     component/component.h \
     component/composite.h \
     component/line.h \
-    interface/test.h
+    interface/test.h \
+    interface/qprogresswiget.h

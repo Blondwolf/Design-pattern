@@ -9,18 +9,14 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = 0);
+    explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+
     QCentralWidget *qcw;
+
 private slots:
-    void Start();
+
 private:
-    void CreateAction();
-    void CreateMenu();
-    void CreateToolbar();
-    QAction *StartAct;
-    QMenu *AppMenu;
-    QToolBar *AppToolBar;
 
 };
 
