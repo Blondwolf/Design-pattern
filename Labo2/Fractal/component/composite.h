@@ -11,6 +11,8 @@ public:
     ~Composite();
 
     virtual void draw(QPainter &gc);
+    virtual void doNextStep();
+
     virtual void add(Component *c);
     virtual void remove(Component *c);
     virtual const QList<Component *> getChildren() const;

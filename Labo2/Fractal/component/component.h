@@ -7,6 +7,7 @@ class Component
 {
 public:
     virtual void draw(QPainter &gc) = 0;
+    virtual void doNextStep() = 0;
 };
 
 #endif // COMPONENT_H

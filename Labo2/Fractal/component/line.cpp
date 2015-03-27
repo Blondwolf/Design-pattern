@@ -16,6 +16,11 @@ void Line::draw(QPainter &gc)
     gc.drawLine(_p1, _p2);
 }
 
+void Line::doNextStep()
+{
+
+}
+
 QPointF Line::p1() const
 {
     return _p1;
