@@ -16,13 +16,11 @@ public:
     ~fractal();
 
     void run();
-    Component getComponent();
-
+    Component *getComponent();
 private:
     QList<QPointF> createPoints();
-    Component createPolygone(QList<QPointF> points);
-    Component createFractal(Component polygone);
-
+    Composite *createPolygone(QList<QPointF> points);
+    Composite *createFractal(Composite *polygone);
 
     int nbCotePolygone;
     double lgArretePolygone;
@@ -30,7 +28,7 @@ private:
     double htTriangle;
     int nbIteration;
 
-    Component newFractal;
+    Component *newFractal;
 };
 
 #endif // FRACTAL_H

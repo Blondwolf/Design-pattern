@@ -18,24 +18,23 @@ fractal::fractal(int nbCotePolygone, double lgArretePolygone, double lgBaseTrian
 
 void fractal::run()
 {
-    createPoints();
+    //Creation de la forme à partir des attributs
+    QList<QPointF> points = createPoints();
+    Composite* polygone = createPolygone(points);
+    createFractal(polygone);
 
-    //Fractalisation
-    //newFractal = new Composite();
-    for(int i=0; i<nbCotePolygone; i++)
-    {
-
-    }
+    //Algorithme de fractalisation
+    newFractal = polygone;
 }
 
-Component fractal::getComponent()
+Component* fractal::getComponent()
 {
     return newFractal;
 }
 
 QList<QPointF> fractal::createPoints()
 {
-    QList<QPointF> points();
+    QList<QPointF> points;
     double rayon = lgArretePolygone / (2*qSin(qDegreesToRadians(180.0f) / nbCotePolygone)); //rayon = longCote / (2*sin(180/n))
     double spanAngle = qDegreesToRadians(360.0f) / nbCotePolygone;
     double angle = 0;
@@ -48,23 +47,64 @@ QList<QPointF> fractal::createPoints()
 
         points.append(point);
     }
+
+    return points;
 }
 
-Component fractal::createPolygone(QList<QPointF> points)
+Composite *fractal::createPolygone(QList<QPointF> points)
 {
     //Creation de la forme de base
-    Composite newPolygone();
+    Composite* newPolygone = new Composite;
 
-    while(!points.isEmpty())
+    QList<QPointF>::const_iterator i = points.constBegin();
+    QPointF p1 = *i++;
+    QPointF p2;
+
+    while(i != points.constEnd())
     {
-        Line line();
-        newPolygone().add(line);
+        ++i;
+        p2 = *i;
+
+        Line *line = new Line;
+        line->setP1(p1);
+        line->setP2(p2);
+
+        p1 = p2;
+
+        newPolygone->add(line);
     }
 
+    return newPolygone;
 }
 
-Component fractal::createFractal(Component polygone)
+Composite* fractal::createFractal(Composite* polygone)
 {
+    QList<Component *> children = polygone->getChildren();
+    QMutableListIterator<Component *> i(children);
 
+    while (i.hasNext())
+    {
+        //Recuperation
+        Component *c = i.next();
+        Line *l = dynamic_cast<Line *>(c);
+        Composite *com = dynamic_cast<Composite *>(c);
+
+        //If it's a line
+        if(l != 0)
+        {
+            //Fractalize the line
+            Composite *newComp = new Composite();
+
+
+            //Affecte new value
+            i.setValue(newComp);
+            delete c;
+        }
+        //Else is a componant => recursivity
+        else if(com != 0)
+        {
+            createFractal(com);
+        }
+    }
 }
 

@@ -15,7 +15,7 @@ public:
 
     virtual void add(Component *c);
     virtual void remove(Component *c);
-    virtual const QList<Component *> getChildren() const;
+    virtual QList<Component *> getChildren() const;
 
 private:
     QList<Component*> listChildren;

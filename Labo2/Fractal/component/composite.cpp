@@ -55,7 +55,7 @@ void Composite::remove(Component *c)
     }
 }
 
-const QList<Component*> Composite::getChildren() const
+QList<Component*> Composite::getChildren() const
 {
     return listChildren;
 }

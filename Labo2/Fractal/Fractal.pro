@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     component/composite.cpp \
     component/line.cpp \
     interface/test.cpp \
-    interface/qprogresswiget.cpp
+    interface/qprogresswiget.cpp \
+    algorithme/fractal.cpp
 
 HEADERS  += interface/mainwindow.h \
     interface/qcentralwidget.h \
@@ -31,4 +32,5 @@ HEADERS  += interface/mainwindow.h \
     component/composite.h \
     component/line.h \
     interface/test.h \
-    interface/qprogresswiget.h
+    interface/qprogresswiget.h \
+    algorithme/fractal.h
