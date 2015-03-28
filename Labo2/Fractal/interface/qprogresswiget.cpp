@@ -11,8 +11,11 @@ QProgressWiget::QProgressWiget(QWidget *parent) : QWidget(parent)
     QVBoxLayout *v= new QVBoxLayout(this);
     v->addWidget(_btStart);
     v->addWidget(_progressBar);
+    v->addStretch();
 
+    setMaximumWidth(300);
 
+    connect(_btStart, SIGNAL(pressed()), this, SLOT(on__btStart_pressed()));
 }
 
 QProgressWiget::~QProgressWiget()
@@ -27,6 +30,6 @@ void QProgressWiget::setProgress(int percent)
 
 void QProgressWiget::on__btStart_pressed()
 {
-
+    emit start();
 }
 

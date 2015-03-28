@@ -1,5 +1,6 @@
 #include "line.h"
 #include <QPainter>
+#include <QDebug>
 
 Line::Line()
 {
@@ -14,11 +15,6 @@ Line::~Line()
 void Line::draw(QPainter &gc)
 {
     gc.drawLine(_p1, _p2);
-}
-
-void Line::doNextStep()
-{
-
 }
 
 QPointF Line::p1() const

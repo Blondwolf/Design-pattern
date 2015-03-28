@@ -9,18 +9,19 @@
 #include "../component/composite.h"
 #include "../component/line.h"
 
-class fractal
+class Fractal
 {
 public:
-    fractal(int nbCotePolygone, double lgArretePolygone, double lgBaseTriangle, double htTriangle, int nbIteration);
-    ~fractal();
+    Fractal(int nbCotePolygone, double lgArretePolygone, double lgBaseTriangle, double htTriangle, int nbIteration);
+    ~Fractal();
 
     void run();
     Component *getComponent();
+
 private:
     QList<QPointF> createPoints();
-    Composite *createPolygone(QList<QPointF> points);
-    Composite *createFractal(Composite *polygone);
+    void createFractal(Component *polygone);
+    Composite *createPolygone(QList<QPointF> &points);
 
     int nbCotePolygone;
     double lgArretePolygone;

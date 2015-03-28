@@ -15,6 +15,9 @@ public:
     explicit QCentralWidget(QWidget *parent = 0);
     ~QCentralWidget();
 
+private slots:
+    void on_progressWiget_start();
+
 private:
     QParametreWidget *parametreWidget;
     QDessinWidget *dessinWidget;

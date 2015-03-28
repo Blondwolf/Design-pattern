@@ -1,5 +1,7 @@
 #include "composite.h"
 #include "line.h"
+#include <QDebug>
+#include <QPainter>
 
 Composite::Composite()
 {
@@ -18,29 +20,6 @@ void Composite::draw(QPainter &gc)
     }
 }
 
-void Composite::doNextStep()
-{
-    QMutableListIterator<Component *> i(listChildren);
-
-    while (i.hasNext())
-    {
-        Component *c = i.next();
-        Line *l = dynamic_cast<Line *>(c);
-        if(l != 0)
-        {
-            //Creation of line
-
-            //Fractalize the line^^
-            Composite *newComp = new Composite();
-
-            //Affecte new value
-            i.setValue(newComp);
-            delete c;
-        }
-
-    }
-}
-
 void Composite::add(Component *c)
 {
     listChildren.append(c);
@@ -55,8 +34,8 @@ void Composite::remove(Component *c)
     }
 }
 
-QList<Component*> Composite::getChildren() const
+QList<Component*> *Composite::getChildren()
 {
-    return listChildren;
+    return &listChildren;
 }
 

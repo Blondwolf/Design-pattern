@@ -12,11 +12,10 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    QCentralWidget *qcw;
-
 private slots:
 
 private:
+    QCentralWidget *qcw;
 
 };
 

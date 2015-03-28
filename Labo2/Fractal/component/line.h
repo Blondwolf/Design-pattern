@@ -9,10 +9,9 @@ class Line : public Component
 {
 public:
     Line();
-    ~Line();
+    virtual ~Line();
 
     virtual void draw(QPainter &gc);
-    virtual void doNextStep();
 
     virtual QPointF p1() const;
     virtual QPointF p2() const;

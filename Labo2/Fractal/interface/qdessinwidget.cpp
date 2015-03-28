@@ -1,6 +1,7 @@
 #include "qdessinwidget.h"
 #include <QtWidgets>
 #include "component/component.h"
+#include "algorithme/fractal.h"
 
 QDessinWidget::QDessinWidget(QWidget *parent):QWidget(parent)
 {
@@ -22,6 +23,7 @@ void QDessinWidget::paintEvent(QPaintEvent *e)
         gc.save();
 
         gc.translate(width()/2, height() /2);
+        gc.drawEllipse(-2,-2,4,4);
         component->draw(gc);
 
         gc.restore();

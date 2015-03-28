@@ -8,14 +8,13 @@ class Composite : public Component
 {
 public:
     Composite();
-    ~Composite();
+    virtual ~Composite();
 
     virtual void draw(QPainter &gc);
-    virtual void doNextStep();
 
     virtual void add(Component *c);
     virtual void remove(Component *c);
-    virtual QList<Component *> getChildren() const;
+    virtual QList<Component *> *getChildren();
 
 private:
     QList<Component*> listChildren;

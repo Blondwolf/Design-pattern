@@ -16,10 +16,18 @@ QParametreWidget::QParametreWidget(QWidget *parent):QWidget(parent)
     _htTriangle= new QDoubleSpinBox(this);
 
     _nbCotePolygone->setMinimum(1);
+    _nbCotePolygone->setValue(5);
     _nbIteration->setMinimum(0);
+    _nbIteration->setValue(5);
     _lgArretePolygone->setMinimum(0);
+    _lgArretePolygone->setMaximum(1000);
+    _lgArretePolygone->setValue(50);
     _lgBaseTriangle->setMinimum(0);
+    _lgBaseTriangle->setValue(20);
+    _lgBaseTriangle->setMaximum(1000);
     _htTriangle->setMinimum(0);
+    _htTriangle->setValue(30);
+    _htTriangle->setMaximum(1000);
 
     /* Mise en forme de la fenêtre */
     QFormLayout *fl = new QFormLayout(this);
@@ -29,9 +37,36 @@ QParametreWidget::QParametreWidget(QWidget *parent):QWidget(parent)
     fl->addRow(_lblLgBaseTriangle, _lgBaseTriangle);
     fl->addRow(_lblHtTriangle, _htTriangle);
     fl->addRow(_lblNbIteration, _nbIteration);
+
+    setMaximumWidth(300);
 }
 
 QParametreWidget::~QParametreWidget()
 {
 
+}
+
+int QParametreWidget::nbCotePolygone() const
+{
+    return _nbCotePolygone->value();
+}
+
+int QParametreWidget::nbIteration() const
+{
+    return _nbIteration->value();
+}
+
+double QParametreWidget::arretePolygone() const
+{
+    return _lgArretePolygone->value();
+}
+
+double QParametreWidget::baseTriangle() const
+{
+    return _lgBaseTriangle->value();
+}
+
+double QParametreWidget::hauteurTriangle() const
+{
+    return _htTriangle->value();
 }
