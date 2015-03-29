@@ -3,6 +3,10 @@
 #include <QDebug>
 #include <QPainter>
 
+/*============================================*/
+//  CONSTRUCTOR / DESTRUCTOR
+/*============================================*/
+
 Composite::Composite()
 {
 }
@@ -12,6 +16,10 @@ Composite::~Composite()
     qDeleteAll(listChildren);
 }
 
+/*============================================*/
+//  OVERRIDE
+/*============================================*/
+
 void Composite::draw(QPainter &gc)
 {
     foreach(Component *c, listChildren)
@@ -19,6 +27,10 @@ void Composite::draw(QPainter &gc)
         c->draw(gc);
     }
 }
+
+/*============================================*/
+//  GET / SET
+/*============================================*/
 
 void Composite::add(Component *c)
 {

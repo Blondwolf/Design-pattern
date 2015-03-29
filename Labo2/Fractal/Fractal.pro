@@ -14,21 +14,23 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     interface/mainwindow.cpp \
-    interface/qcentralwidget.cpp \
-    interface/qdessinwidget.cpp \
-    interface/qparametrewidget.cpp \
     component/component.cpp \
     component/composite.cpp \
     component/line.cpp \
-    interface/qprogresswiget.cpp \
-    algorithme/fractal.cpp
+    algorithme/fractal.cpp \
+    algorithme/threadcontroler.cpp \
+    interface/qwidgetcentral.cpp \
+    interface/qwidgetpainting.cpp \
+    interface/qwidgetparameter.cpp \
+    interface/qwidgetcontrol.cpp
 
 HEADERS  += interface/mainwindow.h \
-    interface/qcentralwidget.h \
-    interface/qdessinwidget.h \
-    interface/qparametrewidget.h \
     component/component.h \
     component/composite.h \
     component/line.h \
-    interface/qprogresswiget.h \
-    algorithme/fractal.h
+    algorithme/fractal.h \
+    algorithme/threadcontroler.h \
+    interface/qwidgetcentral.h \
+    interface/qwidgetpainting.h \
+    interface/qwidgetparameter.h \
+    interface/qwidgetcontrol.h

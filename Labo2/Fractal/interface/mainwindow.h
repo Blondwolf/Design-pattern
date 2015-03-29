@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "qcentralwidget.h"
+#include "qwidgetcentral.h"
 
 class MainWindow : public QMainWindow
 {
@@ -12,10 +12,8 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-private slots:
-
 private:
-    QCentralWidget *qcw;
+    QWidgetCentral *qcw;
 
 };
 

@@ -5,12 +5,13 @@
 
 class Component;
 
-class QDessinWidget:public QWidget
+class QWidgetPainting:public QWidget
 {
     Q_OBJECT
+
 public:
-    explicit QDessinWidget(QWidget *parent = 0);
-    ~QDessinWidget();
+    explicit QWidgetPainting(QWidget *parent = 0);
+    ~QWidgetPainting();
 
     virtual void paintEvent(QPaintEvent *e);
 
