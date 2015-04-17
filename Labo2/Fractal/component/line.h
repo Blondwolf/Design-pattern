@@ -11,7 +11,7 @@ public:
     Line();
     virtual ~Line();
 
-    virtual void draw(QPainter &gc);
+    virtual void draw(QPainter &gc) Q_DECL_OVERRIDE;
 
     virtual QPointF p1() const;
     virtual QPointF p2() const;

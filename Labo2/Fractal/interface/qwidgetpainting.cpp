@@ -1,5 +1,6 @@
 #include "qwidgetpainting.h"
 #include "component/component.h"
+
 #include <QtWidgets>
 
 /*============================================*/
@@ -9,7 +10,7 @@
 QWidgetPainting::QWidgetPainting(QWidget *parent):QWidget(parent)
 {
     component = 0;
-    setMinimumSize(300,300);
+    setMinimumSize(400,400);
 }
 
 QWidgetPainting::~QWidgetPainting()

@@ -62,7 +62,7 @@ Component* Fractal::getFractal()
 /**
  * @brief Create fractal recursivly
  */
-void Fractal::createFractal(Component* polygone)
+void Fractal::createFractal(Component* polygone) const
 {
     /*
      * Quit if the componenet is a line, because we have to be
@@ -216,7 +216,7 @@ unsigned int Fractal::getMaxIterationStep() const
  * a polygon (center on 0), with the wanted side
  * length and the number of side
  */
-QList<QPointF> Fractal::firstPolygonVertex(int sideSize, int nbSide)
+QList<QPointF> Fractal::firstPolygonVertex(int sideSize, int nbSide) const
 {
     /*
      * To calculate the radius, we use the folowing link
@@ -244,7 +244,7 @@ QList<QPointF> Fractal::firstPolygonVertex(int sideSize, int nbSide)
  * fractal. The result is a composite which contains the side
  * of the polygon
  */
-Composite *Fractal::createPolygone(QList<QPointF> &points)
+Composite *Fractal::createPolygone(QList<QPointF> &points) const
 {
     Composite* newPolygone = new Composite;
 
@@ -275,13 +275,3 @@ Composite *Fractal::createPolygone(QList<QPointF> &points)
     return newPolygone;
 }
 
-/**
- * @brief Simple iterative fractal calculation
- */
-unsigned int Fractal::factorial(unsigned int n) const
-{
-    unsigned int ret = 1;
-    for(unsigned int i = 1; i <= n; ++i)
-        ret *= i;
-    return ret;
-}

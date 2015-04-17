@@ -72,7 +72,7 @@ void Fractal::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         int *result = reinterpret_cast<int *>(_a[0]);
         void **func = reinterpret_cast<void **>(_a[1]);
         {
-            typedef void (Fractal::*_t)();
+            typedef void (Fractal::*_t)() const;
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&Fractal::increaseByOneStep)) {
                 *result = 0;
             }
@@ -118,8 +118,8 @@ int Fractal::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void Fractal::increaseByOneStep()
+void Fractal::increaseByOneStep()const
 {
-    QMetaObject::activate(this, &staticMetaObject, 0, Q_NULLPTR);
+    QMetaObject::activate(const_cast< Fractal *>(this), &staticMetaObject, 0, Q_NULLPTR);
 }
 QT_END_MOC_NAMESPACE

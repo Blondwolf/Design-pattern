@@ -17,6 +17,7 @@ public:
 
     void setMaxProgress(unsigned int p);
     void resetProgress();
+    void setEnable(bool enabled);
 
 signals:
     void start();

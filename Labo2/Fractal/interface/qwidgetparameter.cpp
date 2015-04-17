@@ -1,4 +1,5 @@
 #include "qwidgetparameter.h"
+
 #include <QtWidgets>
 
 /*============================================*/
@@ -19,23 +20,7 @@ QWidgetParameter::QWidgetParameter(QWidget *parent):QWidget(parent)
     spinboxTriangleBase= new QDoubleSpinBox(this);
     spinboxTriangleHeight= new QDoubleSpinBox(this);
 
-    spinboxNbSide->setMinimum(1);
-    spinboxTriangleHeight->setMinimum(0);
-    spinboxTriangleBase->setMinimum(0);
-    spinboxSideSize->setMinimum(0);
-    spinboxNbIteration->setMinimum(0);
-
-    spinboxNbSide->setMaximum(20);
-    spinboxNbIteration->setMaximum(8);
-    spinboxSideSize->setMaximum(1000);
-    spinboxTriangleBase->setMaximum(1000);
-    spinboxTriangleHeight->setMaximum(1000);
-
-    spinboxNbSide->setValue(5);
-    spinboxNbIteration->setValue(5);
-    spinboxSideSize->setValue(400);
-    spinboxTriangleBase->setValue(200);
-    spinboxTriangleHeight->setValue(100);
+    parameterSpinBox();
 
     QFormLayout *fl = new QFormLayout(this);
 
@@ -80,4 +65,25 @@ double QWidgetParameter::triangleBase() const
 double QWidgetParameter::triangleHeight() const
 {
     return spinboxTriangleHeight->value();
+}
+
+void QWidgetParameter::parameterSpinBox()
+{
+    spinboxNbSide->setRange(1,20);
+    spinboxNbIteration->setRange(0,8);
+    spinboxSideSize->setRange(0,1000);
+    spinboxTriangleBase->setRange(0,1000);
+    spinboxTriangleHeight->setRange(0,1000);
+
+    spinboxNbSide->setValue(5);
+    spinboxNbIteration->setValue(5);
+    spinboxSideSize->setValue(400);
+    spinboxTriangleBase->setValue(200);
+    spinboxTriangleHeight->setValue(100);
+
+    spinboxNbSide->setSingleStep(1);
+    spinboxNbIteration->setSingleStep(1);
+    spinboxSideSize->setSingleStep(25);
+    spinboxTriangleBase->setSingleStep(25);
+    spinboxTriangleHeight->setSingleStep(25);
 }

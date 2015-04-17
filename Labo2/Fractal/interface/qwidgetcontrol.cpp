@@ -1,4 +1,5 @@
 #include "qwidgetcontrol.h"
+
 #include <QtWidgets>
 
 /*============================================*/
@@ -32,12 +33,23 @@ QWidgetControl::~QWidgetControl()
 
 void QWidgetControl::setMaxProgress(unsigned int p)
 {
+    //Avoid infinite progress bar if no work to do
+    if(p == 0)
+    {
+        progressBar->setValue(1);
+        p = 1;
+    }
     progressBar->setMaximum(p);
 }
 
 void QWidgetControl::resetProgress()
 {
     progressValue = 0;
+}
+
+void QWidgetControl::setEnable(bool enabled)
+{
+    buttonStart->setEnabled(enabled);
 }
 
 /*============================================*/

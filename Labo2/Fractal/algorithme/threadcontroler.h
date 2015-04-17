@@ -14,7 +14,7 @@ class ThreadControler : public QThread
     Q_OBJECT
 
 public:
-    ThreadControler();
+    explicit ThreadControler();
     ~ThreadControler();
 
     void run() Q_DECL_OVERRIDE ;
