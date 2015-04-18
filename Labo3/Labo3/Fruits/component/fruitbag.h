@@ -4,17 +4,21 @@
 #include "component.h"
 #include <QList>
 
-class Composite : public Component
+class FruitBag : public Component
 {
 public:
-    Composite();
-    virtual ~Composite();
+    FruitBag();
+    virtual ~FruitBag();
 
-    virtual void draw(QPainter &gc);
+    virtual QString showFruit() const;
+    virtual bool isContainsPips()const;
 
     virtual void add(Component *c);
     virtual void remove(Component *c);
     virtual QList<Component *> *getChildren();
+
+    virtual QString toString() const;
+    virtual Component *clone() const;
 
 private:
     QList<Component*> listChildren;

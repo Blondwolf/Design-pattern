@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1427717355 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Labo3/component/component.cpp
-	"component.h"
-
-1427717717 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Labo3/component/component.h
-	<iostream>
-

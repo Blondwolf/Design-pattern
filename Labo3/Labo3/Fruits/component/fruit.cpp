@@ -4,12 +4,12 @@
 //  CONSTRUCTOR / DESTRUCTOR
 /*============================================*/
 
-Line::Line()
+Fruit::Fruit()
 {
-
+    _isContainsPips = false;
 }
 
-Line::~Line()
+Fruit::~Fruit()
 {
 
 }
@@ -18,12 +18,12 @@ Line::~Line()
 //  OVERRIDE
 /*============================================*/
 
-string Line::showFruit()
+QString Fruit::showFruit() const
 {
     return _name;
 }
 
-bool Line::isContainsPips()
+bool Fruit::isContainsPips() const
 {
     return _isContainsPips;
 }
@@ -32,12 +32,27 @@ bool Line::isContainsPips()
 //  GET / SET
 /*============================================*/
 
-string Line::name() const
+QString Fruit::name() const
 {
     return _name;
 }
 
-void Line::setName(string name)
+void Fruit::setName(QString name)
 {
     _name = name;
+}
+
+void Fruit::setContainsPips(bool p)
+{
+    _isContainsPips = p;
+}
+
+QString Fruit::toString() const
+{
+    return _name + (_isContainsPips ? " - Avec pépin" : " - Sans Pépin");
+}
+
+Component *Fruit::clone() const
+{
+    return new Fruit(*this);
 }
