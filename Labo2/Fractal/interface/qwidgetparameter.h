@@ -33,6 +33,8 @@ private:
     QDoubleSpinBox *spinboxSideSize;
     QDoubleSpinBox *spinboxTriangleBase;
     QDoubleSpinBox *spinboxTriangleHeight;
+
+    void parameterSpinBox();
 };
 
 #endif // QPARAMETREWIDGET_H

@@ -35,17 +35,16 @@ public:
     unsigned int getMaxIterationStep() const;
 
 signals:
-    void increaseByOneStep();
+    void increaseByOneStep() const;
 
 private:
-    Fractal();
+    explicit Fractal();
     ~Fractal();
     static Fractal *f;
 
-    QList<QPointF> firstPolygonVertex(int sideSize, int nbSide);
-    void createFractal(Component *polygone);
-    Composite *createPolygone(QList<QPointF> &points);
-    unsigned int factorial(unsigned int n) const;
+    QList<QPointF> firstPolygonVertex(int sideSize, int nbSide) const;
+    void createFractal(Component *polygone) const;
+    Composite *createPolygone(QList<QPointF> &points) const;
 
     unsigned int _nbSide;
     unsigned int _nbIteration;

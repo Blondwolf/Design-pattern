@@ -10,7 +10,7 @@ public:
     Composite();
     virtual ~Composite();
 
-    virtual void draw(QPainter &gc);
+    virtual void draw(QPainter &gc) Q_DECL_OVERRIDE;
 
     virtual void add(Component *c);
     virtual void remove(Component *c);

@@ -13,7 +13,7 @@ public:
     explicit QWidgetPainting(QWidget *parent = 0);
     ~QWidgetPainting();
 
-    virtual void paintEvent(QPaintEvent *e);
+    virtual void paintEvent(QPaintEvent *e) Q_DECL_OVERRIDE;
 
     void setComponentToDraw(Component *c);
 

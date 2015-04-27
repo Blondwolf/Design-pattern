@@ -4,6 +4,7 @@
 #include "qwidgetcontrol.h"
 #include "algorithme/fractal.h"
 #include "algorithme/threadcontroler.h"
+
 #include <QtWidgets>
 
 /*============================================*/
@@ -36,9 +37,12 @@ QWidgetCentral::~QWidgetCentral()
 //  SIGNAL / SLOT
 /*============================================*/
 
+/**
+ * @brief On the start of fractal creation
+ */
 void QWidgetCentral::on_widgetControl_start()
 {
-    qDebug()<<"enter : on_widgetControl_start";
+    widgetControl->setEnable(false);
 
     Fractal &f = Fractal::getInstance();
     f.setNbIteration(widgetParameter->nbIteration());
@@ -52,17 +56,19 @@ void QWidgetCentral::on_widgetControl_start()
     widgetControl->resetProgress();
     widgetControl->setMaxProgress(max);
 
-    qDebug()<<"set the progress bar maximum to "<<max<<" steps";
-
     if(worker != 0) delete worker;
     worker = new ThreadControler();
     connect(worker, SIGNAL(finishFractal(Component*)),this, SLOT(on_worker_finishFractal(Component *)));
     worker->start();
 }
 
+/**
+ * @brief At the end of fractal creation
+ */
 void QWidgetCentral::on_worker_finishFractal(Component *c)
 {
     widgetPainting->setComponentToDraw(c);
+    widgetControl->setEnable(true);
     repaint();
 }
 
