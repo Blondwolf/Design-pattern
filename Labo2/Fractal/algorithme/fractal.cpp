@@ -44,7 +44,8 @@ Fractal::~Fractal()
 
 /**
  * @brief Calculate and return the fractal.
- * The comlexity is in O(!nbSide)
+ * The
+ * mlexity is in O(!nbSide)
  */
 Component* Fractal::getFractal()
 {

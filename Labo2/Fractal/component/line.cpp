@@ -22,7 +22,32 @@ Line::~Line()
 
 void Line::draw(QPainter &gc)
 {
+    int random= rand() % 5 + 1;
+
+    if (random==1)
+    {
+        QPen penHLines(QColor("#0e5a77"), 1);
+        gc.setPen(penHLines);
+    }
+    if(random==2)
+    {
+        QPen penHLines(QColor("#6fc833"), 1);
+        gc.setPen(penHLines);
+    }
+    if(random ==3)
+    {
+        QPen penHLines(QColor("#ffd700"), 1);
+        gc.setPen(penHLines);
+    }
+    if(random ==4)
+    {
+        QPen penHLines(QColor("#c14096"), 1);
+        gc.setPen(penHLines);
+    }
+
+
     gc.drawLine(_p1, _p2);
+
 }
 
 /*============================================*/

@@ -25,6 +25,7 @@ void Composite::draw(QPainter &gc)
     foreach(Component *c, listChildren)
     {
         c->draw(gc);
+
     }
 }
 
