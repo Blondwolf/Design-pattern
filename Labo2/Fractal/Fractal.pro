@@ -34,3 +34,6 @@ HEADERS  += interface/mainwindow.h \
     interface/qwidgetpainting.h \
     interface/qwidgetparameter.h \
     interface/qwidgetcontrol.h
+
+RESOURCES += \
+    ../BW-Qt-Style/stylesheet-resources.qrc

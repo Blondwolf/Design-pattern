@@ -7,14 +7,14 @@
 //  CONSTRUCTOR / DESTRUCTOR
 /*============================================*/
 
-Line::Line()
+Line::Line(double hue)
 {
+    _hue = hue;
 
 }
 
 Line::~Line()
 {
-
 }
 
 /*============================================*/
@@ -23,29 +23,11 @@ Line::~Line()
 
 void Line::draw(QPainter &gc)
 {
-    int random= rand() % 5 + 1;
+    QColor c;
+    c.setHsl(_hue, 255, 100);
 
-    if (random==1)
-    {
-        QPen penHLines(QColor("#0e5a77"), 1);
-        gc.setPen(penHLines);
-    }
-    if(random==2)
-    {
-        QPen penHLines(QColor("#6fc833"), 1);
-        gc.setPen(penHLines);
-    }
-    if(random ==3)
-    {
-        QPen penHLines(QColor("#ffd700"), 1);
-        gc.setPen(penHLines);
-    }
-    if(random ==4)
-    {
-        QPen penHLines(QColor("#c14096"), 1);
-        gc.setPen(penHLines);
-    }
-
+    QPen penHLines(c, 0);
+    gc.setPen(penHLines);
 
     gc.drawLine(_p1, _p2);
 
@@ -63,6 +45,11 @@ QPointF Line::p1() const
 QPointF Line::p2() const
 {
     return _p2;
+}
+
+double Line::hue() const
+{
+    return _hue;
 }
 
 void Line::setP1(QPointF p1)

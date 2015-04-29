@@ -13,9 +13,9 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        component/component.cpp\
-        component/fruit.cpp\
-        component/fruitbag.cpp\
+        composit/component.cpp\
+        composit/fruit.cpp\
+        composit/fruitbag.cpp\
     commande/commande.cpp \
     commande/commandestate.cpp \
     commande/waiting.cpp \
@@ -26,9 +26,9 @@ SOURCES += main.cpp\
     decorator/decoratiosharp.cpp \
     decorator/decorationequals.cpp
 
-HEADERS  += component/component.h\
-        component/fruit.h\
-        component/fruitbag.h\
+HEADERS  += composit/component.h\
+        composit/fruit.h\
+        composit/fruitbag.h\
     commande/commande.h \
     commande/commandestate.h \
     commande/waiting.h \

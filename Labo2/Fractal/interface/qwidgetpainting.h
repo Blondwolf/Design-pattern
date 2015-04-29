@@ -15,10 +15,13 @@ public:
 
     virtual void paintEvent(QPaintEvent *e) Q_DECL_OVERRIDE;
 
+    void setZoomLevel(double scale);
+
     void setComponentToDraw(Component *c);
 
 private:
     Component *component;
+    double scale;
 };
 
 #endif // QDESSINWIDGET_H
