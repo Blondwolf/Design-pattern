@@ -49,9 +49,9 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../Fruits/main.cpp \
-		../Fruits/component/component.cpp \
-		../Fruits/component/fruit.cpp \
-		../Fruits/component/fruitbag.cpp \
+		../Fruits/composit/component.cpp \
+		../Fruits/composit/fruit.cpp \
+		../Fruits/composit/fruitbag.cpp \
 		../Fruits/commande/commande.cpp \
 		../Fruits/commande/commandestate.cpp \
 		../Fruits/commande/waiting.cpp \
@@ -193,9 +193,9 @@ DIST          = /usr/local/Qt5/5.4/gcc_64/mkspecs/features/spec_pre.prf \
 		/usr/local/Qt5/5.4/gcc_64/mkspecs/features/exceptions.prf \
 		/usr/local/Qt5/5.4/gcc_64/mkspecs/features/yacc.prf \
 		/usr/local/Qt5/5.4/gcc_64/mkspecs/features/lex.prf \
-		../Fruits/Fruits.pro ../Fruits/component/component.h \
-		../Fruits/component/fruit.h \
-		../Fruits/component/fruitbag.h \
+		../Fruits/Fruits.pro ../Fruits/composit/component.h \
+		../Fruits/composit/fruit.h \
+		../Fruits/composit/fruitbag.h \
 		../Fruits/commande/commande.h \
 		../Fruits/commande/commandestate.h \
 		../Fruits/commande/waiting.h \
@@ -205,9 +205,9 @@ DIST          = /usr/local/Qt5/5.4/gcc_64/mkspecs/features/spec_pre.prf \
 		../Fruits/decorator/decoratioetoile.h \
 		../Fruits/decorator/decoratiosharp.h \
 		../Fruits/decorator/decorationequals.h ../Fruits/main.cpp \
-		../Fruits/component/component.cpp \
-		../Fruits/component/fruit.cpp \
-		../Fruits/component/fruitbag.cpp \
+		../Fruits/composit/component.cpp \
+		../Fruits/composit/fruit.cpp \
+		../Fruits/composit/fruitbag.cpp \
 		../Fruits/commande/commande.cpp \
 		../Fruits/commande/commandestate.cpp \
 		../Fruits/commande/waiting.cpp \
@@ -508,8 +508,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../Fruits/component/component.h ../Fruits/component/fruit.h ../Fruits/component/fruitbag.h ../Fruits/commande/commande.h ../Fruits/commande/commandestate.h ../Fruits/commande/waiting.h ../Fruits/commande/paied.h ../Fruits/commande/send.h ../Fruits/decorator/decorator.h ../Fruits/decorator/decoratioetoile.h ../Fruits/decorator/decoratiosharp.h ../Fruits/decorator/decorationequals.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Fruits/main.cpp ../Fruits/component/component.cpp ../Fruits/component/fruit.cpp ../Fruits/component/fruitbag.cpp ../Fruits/commande/commande.cpp ../Fruits/commande/commandestate.cpp ../Fruits/commande/waiting.cpp ../Fruits/commande/paied.cpp ../Fruits/commande/send.cpp ../Fruits/decorator/decorator.cpp ../Fruits/decorator/decoratioetoile.cpp ../Fruits/decorator/decoratiosharp.cpp ../Fruits/decorator/decorationequals.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Fruits/composit/component.h ../Fruits/composit/fruit.h ../Fruits/composit/fruitbag.h ../Fruits/commande/commande.h ../Fruits/commande/commandestate.h ../Fruits/commande/waiting.h ../Fruits/commande/paied.h ../Fruits/commande/send.h ../Fruits/decorator/decorator.h ../Fruits/decorator/decoratioetoile.h ../Fruits/decorator/decoratiosharp.h ../Fruits/decorator/decorationequals.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Fruits/main.cpp ../Fruits/composit/component.cpp ../Fruits/composit/fruit.cpp ../Fruits/composit/fruitbag.cpp ../Fruits/commande/commande.cpp ../Fruits/commande/commandestate.cpp ../Fruits/commande/waiting.cpp ../Fruits/commande/paied.cpp ../Fruits/commande/send.cpp ../Fruits/decorator/decorator.cpp ../Fruits/decorator/decoratioetoile.cpp ../Fruits/decorator/decoratiosharp.cpp ../Fruits/decorator/decorationequals.cpp $(DISTDIR)/
 
 
 clean:compiler_clean 
@@ -548,8 +548,8 @@ compiler_clean:
 
 ####### Compile
 
-main.o: ../Fruits/main.cpp ../Fruits/component/fruit.h \
-		../Fruits/component/component.h \
+main.o: ../Fruits/main.cpp ../Fruits/composit/fruit.h \
+		../Fruits/composit/component.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/QString \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qstring.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qchar.h \
@@ -587,7 +587,7 @@ main.o: ../Fruits/main.cpp ../Fruits/component/fruit.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qarraydata.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qstringbuilder.h \
 		../Fruits/decorator/decorator.h \
-		../Fruits/component/fruitbag.h \
+		../Fruits/composit/fruitbag.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/QList \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qlist.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qalgorithms.h \
@@ -627,7 +627,7 @@ main.o: ../Fruits/main.cpp ../Fruits/component/fruit.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qshareddata.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Fruits/main.cpp
 
-component.o: ../Fruits/component/component.cpp ../Fruits/component/component.h \
+component.o: ../Fruits/composit/component.cpp ../Fruits/composit/component.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/QString \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qstring.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qchar.h \
@@ -665,10 +665,10 @@ component.o: ../Fruits/component/component.cpp ../Fruits/component/component.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qarraydata.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qstringbuilder.h \
 		../Fruits/decorator/decorator.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o component.o ../Fruits/component/component.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o component.o ../Fruits/composit/component.cpp
 
-fruit.o: ../Fruits/component/fruit.cpp ../Fruits/component/fruit.h \
-		../Fruits/component/component.h \
+fruit.o: ../Fruits/composit/fruit.cpp ../Fruits/composit/fruit.h \
+		../Fruits/composit/component.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/QString \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qstring.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qchar.h \
@@ -706,10 +706,10 @@ fruit.o: ../Fruits/component/fruit.cpp ../Fruits/component/fruit.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qarraydata.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qstringbuilder.h \
 		../Fruits/decorator/decorator.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o fruit.o ../Fruits/component/fruit.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o fruit.o ../Fruits/composit/fruit.cpp
 
-fruitbag.o: ../Fruits/component/fruitbag.cpp ../Fruits/component/fruitbag.h \
-		../Fruits/component/component.h \
+fruitbag.o: ../Fruits/composit/fruitbag.cpp ../Fruits/composit/fruit.h \
+		../Fruits/composit/component.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/QString \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qstring.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qchar.h \
@@ -746,14 +746,8 @@ fruitbag.o: ../Fruits/component/fruitbag.cpp ../Fruits/component/fruitbag.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qnamespace.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qarraydata.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qstringbuilder.h \
-		../Fruits/decorator/decorator.h \
-		/usr/local/Qt5/5.4/gcc_64/include/QtCore/QList \
-		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qlist.h \
-		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qalgorithms.h \
-		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qiterator.h \
-		/usr/local/Qt5/5.4/gcc_64/include/QtCore/qbytearraylist.h \
-		../Fruits/component/fruit.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o fruitbag.o ../Fruits/component/fruitbag.cpp
+		../Fruits/decorator/decorator.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o fruitbag.o ../Fruits/composit/fruitbag.cpp
 
 commande.o: ../Fruits/commande/commande.cpp ../Fruits/commande/commande.h \
 		/usr/local/Qt5/5.4/gcc_64/include/QtCore/QString \

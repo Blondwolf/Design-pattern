@@ -20,6 +20,7 @@ public:
 private slots:
     void on_widgetControl_start();
     void on_worker_finishFractal(Component *c);
+    void on_widgetParameter_zoomChange(double value);
 
 private:
     QWidgetParameter *widgetParameter;

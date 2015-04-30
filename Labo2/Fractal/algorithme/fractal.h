@@ -51,6 +51,7 @@ private:
     double _sideSize;
     double _triangleBase;
     double _triangleHeight;
+    double _hueStep;
 };
 
 #endif // FRACTAL_H

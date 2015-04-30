@@ -1,10 +1,14 @@
-#include "component/fruit.h"
-#include "component/fruitbag.h"
+#include "composit/fruit.h"
+#include "composit/fruitbag.h"
 #include "decorator/decoratioetoile.h"
 #include "decorator/decoratiosharp.h"
 #include "decorator/decorationequals.h"
 #include "commande/commande.h"
 #include <QTextStream>
+
+//=============================================
+//  AFFICHAGE
+//=============================================
 
 void showTitle(const QString &s){
     QTextStream(stdout)<<""<<endl;
@@ -42,6 +46,29 @@ void showShiftedBloc(const QString &s){
     }
     QTextStream(stdout)<<""<<endl;
 }
+
+
+void clearScreen(){
+
+}
+
+//=============================================
+//  NAVIGATION
+//=============================================
+
+void mainMenu()
+{
+    clearScreen();
+    showTitle("Menu principal");
+    QString s;
+    s.append(" ");
+}
+
+//=============================================
+//  NAVIGATION
+//=============================================
+
+
 
 int main(int argc, char *argv[])
 {

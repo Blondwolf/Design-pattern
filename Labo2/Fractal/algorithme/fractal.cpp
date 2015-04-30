@@ -2,6 +2,7 @@
 #include <QPointF>
 #include <QtMath>
 #include <QTransform>
+#include <QDateTime>
 
 #include "../component/component.h"
 #include "../component/composite.h"
@@ -31,6 +32,7 @@ Fractal::Fractal()
     _triangleBase = 0;
     _triangleHeight = 0;
     _nbIteration = 0;
+    _hueStep = 0;
 }
 
 Fractal::~Fractal()
@@ -52,6 +54,9 @@ Component* Fractal::getFractal()
     //Create base polygon
     QList<QPointF> points = firstPolygonVertex(_sideSize, _nbSide);
     Composite *newFractal = createPolygone(points);
+
+    qsrand(QDateTime::currentDateTime ().toTime_t ());
+    _hueStep = (qrand() % 1000);
 
     //Iterate on the polygon and create fractal
     for (unsigned int i = 0; i < _nbIteration; ++i) {
@@ -90,6 +95,7 @@ void Fractal::createFractal(Component* polygone) const
             //Get the data of child line and delete its
             QPointF p1 = line->p1();
             QPointF p2 = line->p2();
+            double hue = line->hue();
             delete line;
 
             //Calculate the transformation matrix
@@ -104,28 +110,28 @@ void Fractal::createFractal(Component* polygone) const
             //Create the fractal pattern with the given data
             Composite *newComp = new Composite();
 
-            Line *l1 = new Line();
+            Line *l1 = new Line(hue);
             QPointF p1l1 = mt.map(QPointF(0,0));
             QPointF p2l1 = mt.map(QPointF((_sideSize-_triangleBase)/2,0));
             l1->setP1(p1l1);
             l1->setP2(p2l1);
             newComp->add(l1);
 
-            Line *l2 = new Line();
+            Line *l2 = new Line(hue+_hueStep);
             QPointF p1l2 = mt.map(QPointF((_sideSize-_triangleBase)/2,0));
             QPointF p2l2 = mt.map(QPointF(_sideSize/2,_triangleHeight));
             l2->setP1(p1l2);
             l2->setP2(p2l2);
             newComp->add(l2);
 
-            Line *l3 = new Line();
+            Line *l3 = new Line(hue+_hueStep);
             QPointF p1l3 = mt.map(QPointF(_sideSize/2,_triangleHeight));
             QPointF p2l3 = mt.map(QPointF(_triangleBase+((_sideSize-_triangleBase)/2),0));
             l3->setP1(p1l3);
             l3->setP2(p2l3);
             newComp->add(l3);
 
-            Line *l4 = new Line();
+            Line *l4 = new Line(hue);
             QPointF p1l4 = mt.map(QPointF(_triangleBase+((_sideSize-_triangleBase)/2),0));
             QPointF p2l4 = mt.map(QPointF(_sideSize,0));
             l4->setP1(p1l4);
@@ -259,7 +265,7 @@ Composite *Fractal::createPolygone(QList<QPointF> &points) const
     {
         p2 = *i;
 
-        Line *line = new Line();
+        Line *line = new Line(0);
         line->setP1(p1);
         line->setP2(p2);
 
@@ -268,7 +274,7 @@ Composite *Fractal::createPolygone(QList<QPointF> &points) const
 
         newPolygone->add(line);
     }
-    Line *line = new Line();
+    Line *line = new Line(0);
     line->setP1(p2);
     line->setP2(pLast);
     newPolygone->add(line);

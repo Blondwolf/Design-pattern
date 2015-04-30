@@ -11,10 +11,13 @@ DecoratioEtoile::~DecoratioEtoile()
 
 QString DecoratioEtoile::showFruit() const
 {
+    QString source = interne->showFruit();
+
     QString s;
     s.append("************************************\n");
-    s.append(interne->showFruit());
+    s.append(source);
     s.append("\n************************************\n");
+
     return s;
 }
 

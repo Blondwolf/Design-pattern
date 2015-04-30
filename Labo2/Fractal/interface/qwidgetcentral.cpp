@@ -26,6 +26,7 @@ QWidgetCentral::QWidgetCentral(QWidget *parent):QWidget(parent)
     Fractal &f = Fractal::getInstance();
     connect(&f, SIGNAL(increaseByOneStep()), widgetControl, SLOT(on_increaseByOneStep()));
     connect(widgetControl, SIGNAL(start()), this, SLOT(on_widgetControl_start()));
+    connect(widgetParameter, SIGNAL(zoomChange(double)), this, SLOT(on_widgetParameter_zoomChange(double)));
 }
 
 QWidgetCentral::~QWidgetCentral()
@@ -67,8 +68,16 @@ void QWidgetCentral::on_widgetControl_start()
  */
 void QWidgetCentral::on_worker_finishFractal(Component *c)
 {
+    double ratio = widgetParameter->zoomLevel();
+    widgetPainting->setZoomLevel(ratio);
     widgetPainting->setComponentToDraw(c);
     widgetControl->setEnable(true);
+    repaint();
+}
+
+void QWidgetCentral::on_widgetParameter_zoomChange(double value)
+{
+    widgetPainting->setZoomLevel(value);
     repaint();
 }
 

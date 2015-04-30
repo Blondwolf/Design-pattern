@@ -20,6 +20,13 @@ public:
     double sideSize() const;
     double triangleBase() const;
     double triangleHeight() const;
+    double zoomLevel() const;
+
+signals:
+    void zoomChange(double value);
+
+private slots:
+    void on_spinboxZoomLevel_valueChanged(double value);
 
 private:
     QLabel *labelNbSide;
@@ -27,12 +34,14 @@ private:
     QLabel *labelSideSize;
     QLabel *labelTriangleBase;
     QLabel *labelTriangleHeight;
+    QLabel *labelZoomLevel;
 
     QSpinBox *spinboxNbSide;
     QSpinBox *spinboxNbIteration;
     QDoubleSpinBox *spinboxSideSize;
     QDoubleSpinBox *spinboxTriangleBase;
     QDoubleSpinBox *spinboxTriangleHeight;
+    QDoubleSpinBox *spinboxZoomLevel;
 
     void parameterSpinBox();
 };
