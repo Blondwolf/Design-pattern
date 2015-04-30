@@ -32,14 +32,6 @@ void showSubTitle(const string &s){
     cout<<""<<endl;
 }
 
-void showEnd(){
-    cout<<""<<endl;
-    cout<<""<<endl;
-    cout<<"C'est fini !";
-    cout<<""<<endl;
-    cout<<""<<endl;
-}
-
 void clearScreen()
 {
     for(int i = 0; i < 50; ++i)
@@ -183,7 +175,7 @@ bool mainMenu()
 }
 
 //=============================================
-//  POINT D'ENTREE
+//  ENTRY POINT
 //=============================================
 
 
