@@ -9,7 +9,7 @@ public:
     DecoratioEtoile( Decorator *interne);
     ~DecoratioEtoile();
 
-    virtual QString showFruit() const;
+    virtual string showFruit() const;
 
 };
 

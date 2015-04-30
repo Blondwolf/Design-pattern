@@ -6,14 +6,14 @@
 class Fruit : public Component
 {
 public:
-    Fruit(QString &name, bool containPips);
+    Fruit(string &name, bool containPips);
     virtual ~Fruit();
 
-    virtual QString showFruit() const;
+    virtual string showFruit() const;
     virtual bool isContainsPips() const;
 
 private:
-    QString _name;
+    string _name;
     bool _isContainsPips;
 };
 

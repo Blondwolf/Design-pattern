@@ -14,7 +14,7 @@ Commande::~Commande()
 
 }
 
-QString Commande::traiterCommande()
+string Commande::traiterCommande()
 {
     if(dynamic_cast<Waiting*>( state ) != 0)
     {

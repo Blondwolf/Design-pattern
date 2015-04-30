@@ -9,7 +9,7 @@ public:
     DecoratioEquals( Decorator *interne);
     ~DecoratioEquals();
 
-    virtual QString showFruit() const;
+    virtual string showFruit() const;
 
 };
 

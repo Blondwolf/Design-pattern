@@ -1,7 +1,9 @@
 #ifndef COMMANDE_H
 #define COMMANDE_H
 
-#include <QString>
+#include <iostream>
+
+using namespace std;
 
 class CommandeState;
 
@@ -11,7 +13,7 @@ public:
     Commande();
     ~Commande();
 
-    QString traiterCommande();
+    string traiterCommande();
 
 private:
     CommandeState *state;

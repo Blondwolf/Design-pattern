@@ -1,7 +1,9 @@
 #ifndef DECORATOR_H
 #define DECORATOR_H
 
-#include <QString>
+#include <iostream>
+
+using namespace std;
 
 class Decorator
 {
@@ -9,7 +11,7 @@ public:
     Decorator(Decorator *interne);
     ~Decorator();
 
-    virtual QString showFruit() const = 0;
+    virtual string showFruit() const = 0;
 
 protected:
     Decorator *interne;

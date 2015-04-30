@@ -1,16 +1,17 @@
 #ifndef COMPONENT_H
 #define COMPONENT_H
 
-#include <QString>
-#include "../decorator/decorator.h"
+#include <iostream>
 
-class Component : public Decorator
+using namespace std;
+
+class Component
 {
 public:
     Component();
     virtual ~Component();
 
-    virtual QString showFruit() const = 0;
+    virtual string showFruit() const = 0;
     virtual bool isContainsPips()const = 0;
 };
 

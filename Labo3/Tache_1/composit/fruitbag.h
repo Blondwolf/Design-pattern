@@ -2,7 +2,7 @@
 #define COMPOSITE_H
 
 #include "component.h"
-#include <QList>
+#include <list>
 
 class FruitBag : public Component
 {
@@ -10,15 +10,15 @@ public:
     FruitBag();
     virtual ~FruitBag();
 
-    virtual QString showFruit() const;
+    virtual string showFruit() const;
     virtual bool isContainsPips()const;
 
     virtual void add(Component *c);
     virtual void remove(Component *c);
-    virtual const QList<Component *> *getChildren() const;
+    virtual const list<Component *> *getChildren() const;
 
 private:
-    QList<Component*> listChildren;
+    list<Component*> listChildren;
 };
 
 #endif // COMPOSITE_H

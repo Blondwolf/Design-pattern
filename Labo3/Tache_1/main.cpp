@@ -1,0 +1,145 @@
+#include "composit/fruit.h"
+#include "composit/fruitbag.h"
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+FruitBag *currentBag = 0;
+list<FruitBag  *> listFruitBag;
+
+//=============================================
+//  DISPLAY
+//=============================================
+
+void showTitle(const string &s){
+    cout<<""<<endl;
+    cout<<""<<endl;
+    cout<<"==================================="<<endl;
+    cout<<s<<endl;
+    cout<<"==================================="<<endl;
+}
+
+void showSubTitle(const string &s){
+    cout<<""<<endl;
+    cout<<s<<endl;
+    cout<<"-----------------------------------"<<endl;
+    cout<<""<<endl;
+}
+
+void showEnd(){
+    cout<<""<<endl;
+    cout<<""<<endl;
+    cout<<"C'est fini !";
+    cout<<""<<endl;
+    cout<<""<<endl;
+}
+
+void clearScreen()
+{
+    for(int i = 0; i < 50; ++i)
+    {
+        cout<<endl;
+    }
+}
+
+//=============================================
+//  NAVIGATION
+//=============================================
+
+void addFruit()
+{
+    string name;
+    bool containPips;
+    cout<<"Entrez le nom : ";
+    cin>>name;
+    cout<<endl;
+
+    cout<<"Contien des pepins ? (0 = non, 1 = oui)";
+    cin>>containPips;
+    cout<<endl;
+
+    currentBag->add(new Fruit(name, containPips));
+}
+
+void createNewBag()
+{
+    listFruitBag.push_front(currentBag);
+    currentBag = new FruitBag();
+}
+
+void mergeBag()
+{
+    for(list<FruitBag*>::const_iterator ci = listFruitBag.begin();
+    ci != listFruitBag.end(); ++ci)
+    {
+    currentBag->add((*ci));
+    }
+}
+
+void showStatus()
+{
+    cout<<"Nombre de panier a fusionner : "<<listFruitBag.size()<<endl;
+    cout<<"Le panier acctuel contien des pépins ? : "<<currentBag->isContainsPips()<<" (0 = non, 1 = oui)"<<endl;
+    cout<<endl<<(currentBag->showFruit())<<endl;
+}
+
+bool mainMenu()
+{
+    clearScreen();
+    showTitle("Menu principal");
+    showSubTitle("Panier actuel");
+    showStatus();
+    showSubTitle("Options");
+
+    cout<<"1) Ajouter un fruit au panier courant"<<endl;
+    cout<<"2) Crer un nouveau panier courent"<<endl;
+    cout<<"3) Fusionner toute la liste des paniers au panier courent"<<endl;
+    cout<<"0) Quiter"<<endl;
+
+    cout<<endl<<"Option choisie : ";
+
+    int option = 0;
+    cin>>option;
+    cout<<endl;
+
+    switch(option)
+    {
+        case 1:
+            addFruit();
+            break;
+        case 2:
+            createNewBag();
+            break;
+        case 3:
+            mergeBag();
+            break;
+        case 0:
+            return false;
+        default:
+            return false;
+
+    }
+    return true;
+}
+
+//=============================================
+//  POINT D'ENTREE
+//=============================================
+
+
+
+int main(int argc, char *argv[])
+{
+    currentBag = new FruitBag();
+    while(mainMenu());
+
+        for(list<FruitBag*>::const_iterator ci = listFruitBag.begin();
+            ci != listFruitBag.end(); ++ci)
+        {
+            delete(*ci);
+        }
+        delete currentBag;
+
+    return 0;
+}

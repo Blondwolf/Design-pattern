@@ -9,11 +9,11 @@ DecoratioEtoile::~DecoratioEtoile()
 
 }
 
-QString DecoratioEtoile::showFruit() const
+string DecoratioEtoile::showFruit() const
 {
-    QString source = interne->showFruit();
+    string source = interne->showFruit();
 
-    QString s;
+    string s;
     s.append("************************************\n");
     s.append(source);
     s.append("\n************************************\n");

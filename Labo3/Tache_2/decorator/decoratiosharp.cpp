@@ -9,9 +9,9 @@ DecoratioSharp::~DecoratioSharp()
 
 }
 
-QString DecoratioSharp::showFruit() const
+string DecoratioSharp::showFruit() const
 {
-    QString s;
+    string s;
     s.append("########################################\n");
     s.append(interne->showFruit());
     s.append("\n#######################################\n");

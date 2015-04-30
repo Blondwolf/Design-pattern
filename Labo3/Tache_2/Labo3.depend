@@ -1,0 +1,155 @@
+# depslib dependency file v1.0
+1430223350 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/decorator/decorator.cpp
+	"decorator.h"
+
+1430325789 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/decorator/decorator.h
+	<iostream>
+
+1430223350 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/composit/component.cpp
+	"component.h"
+
+1430325815 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/composit/component.h
+	"../decorator/decorator.h"
+
+1430326150 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/composit/fruit.cpp
+	"fruit.h"
+
+1430326120 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/composit/fruit.h
+	"component.h"
+
+1430377607 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/composit/fruitbag.cpp
+	"fruitbag.h"
+	"fruit.h"
+
+1430326444 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/composit/fruitbag.h
+	"component.h"
+	<list>
+
+1430377738 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/commande/commande.cpp
+	"commande.h"
+	"commandestate.h"
+	"waiting.h"
+	"paied.h"
+	"send.h"
+
+1430377736 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/commande/commande.h
+	<iostream>
+
+1430223350 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/commande/commandestate.h
+
+1430223350 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/commande/waiting.h
+	"commandestate.h"
+
+1430223350 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/commande/paied.h
+	"commandestate.h"
+
+1430223350 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/commande/send.h
+	"commandestate.h"
+
+1430223350 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/commande/commandestate.cpp
+	"commandestate.h"
+
+1430223350 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/commande/paied.cpp
+	"paied.h"
+
+1430223350 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/commande/send.cpp
+	"send.h"
+
+1430223350 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/commande/waiting.cpp
+	"waiting.h"
+
+1430377768 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/decorator/decoratioetoile.cpp
+	"decoratioetoile.h"
+
+1430377753 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/decorator/decoratioetoile.h
+	"decorator.h"
+
+1430377788 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/decorator/decorationequals.cpp
+	"decorationequals.h"
+
+1430377777 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/decorator/decorationequals.h
+	"decorator.h"
+
+1430377809 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/decorator/decoratiosharp.cpp
+	"decoratiosharp.h"
+
+1430377794 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/decorator/decoratiosharp.h
+	"decorator.h"
+
+1430420425 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1/composit/component.cpp
+	"component.h"
+
+1430420644 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1/composit/component.h
+	<iostream>
+
+1430425677 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1/composit/fruit.cpp
+	"fruit.h"
+
+1430326120 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1/composit/fruit.h
+	"component.h"
+
+1430377607 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1/composit/fruitbag.cpp
+	"fruitbag.h"
+	"fruit.h"
+
+1430326444 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1/composit/fruitbag.h
+	"component.h"
+	<list>
+
+1430426294 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1/main.cpp
+	"composit/fruit.h"
+	"composit/fruitbag.h"
+	<iostream>
+	<list>
+
+1430426465 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/composit/component.cpp
+	"component.h"
+
+1430426451 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/composit/component.h
+	<iostream>
+	"../decorator/decorator.h"
+
+1430425677 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/composit/fruit.cpp
+	"fruit.h"
+
+1430326120 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/composit/fruit.h
+	"component.h"
+
+1430377607 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/composit/fruitbag.cpp
+	"fruitbag.h"
+	"fruit.h"
+
+1430326444 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/composit/fruitbag.h
+	"component.h"
+	<list>
+
+1430377768 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/decorator/decoratioetoile.cpp
+	"decoratioetoile.h"
+
+1430377753 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/decorator/decoratioetoile.h
+	"decorator.h"
+
+1430325789 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/decorator/decorator.h
+	<iostream>
+
+1430377788 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/decorator/decorationequals.cpp
+	"decorationequals.h"
+
+1430377777 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/decorator/decorationequals.h
+	"decorator.h"
+
+1430377809 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/decorator/decoratiosharp.cpp
+	"decoratiosharp.h"
+
+1430377794 /media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/decorator/decoratiosharp.h
+	"decorator.h"
+
+1430223350 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/decorator/decorator.cpp
+	"decorator.h"
+
+1430426387 source:/media/cloud/arkeine/git/design-pattern/Design-pattern/Labo3/Tache_1 (copie)/main.cpp
+	"composit/fruit.h"
+	"composit/fruitbag.h"
+	<iostream>
+	<list>
+

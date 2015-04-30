@@ -9,7 +9,7 @@ public:
     DecoratioSharp( Decorator *interne);
     ~DecoratioSharp();
 
-    virtual QString showFruit() const;
+    virtual string showFruit() const;
 
 };
 

@@ -4,9 +4,9 @@
 //  CONSTRUCTOR / DESTRUCTOR
 /*============================================*/
 
-Fruit::Fruit(QString &name, bool containPips)
+Fruit::Fruit(string &name, bool containPips)
 {
-    _isContainsPips = false;
+    _isContainsPips = containPips;
     _name = name;
 }
 
@@ -19,7 +19,7 @@ Fruit::~Fruit()
 //  OVERRIDE
 /*============================================*/
 
-QString Fruit::showFruit() const
+string Fruit::showFruit() const
 {
     return _name;
 }

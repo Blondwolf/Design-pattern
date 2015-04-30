@@ -9,9 +9,9 @@ DecoratioEquals::~DecoratioEquals()
 
 }
 
-QString DecoratioEquals::showFruit() const
+string DecoratioEquals::showFruit() const
 {
-    QString s;
+    string s;
     s.append("=========================================\n");
     s.append(interne->showFruit());
     s.append("\n=========================================\n");
